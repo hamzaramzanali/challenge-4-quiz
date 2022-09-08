@@ -7,23 +7,15 @@ var counterDiv = document.getElementById("counter");
 var choicesEl = document.getElementById("choices");
 var initialsEl = document.getElementById("initials");
 
-// start quiz and hide starter screen
-startBtn.onclick = () => {
-    showQuetions(0); 
-    queCounter(1); 
-    startTimer(15);
-    startTimerLine(0);
-}
 
 startBtn.addEventListener("click", function() {
 
-    var counter = 2;
+    var counter = 100;
     var timer = setInterval(function() {
         counter --;
         counterDiv.textContent = counter;
         if (counter === 0) {
             clearInterval(timer);
-            alert("Better luck next time")
         }
     }, 1000);
 })
